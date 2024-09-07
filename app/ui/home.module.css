@@ -5,3 +5,33 @@
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
 }
+
+.chatBubbleLeft, .chatBubbleRight{
+  position: relative;
+}
+
+/* 三角形在气泡左侧 */
+.chatBubbleLeft::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 4px;
+  top: 50%;
+  transform: rotate(45deg) translateY(-50%);
+  left: -12px;
+}
+
+/* 三角形在气泡右侧 */
+.chatBubbleRight::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: rgb(187 247 208);
+  border-radius: 4px;
+  top: 50%;
+  transform: rotate(45deg) translateY(-50%);
+  right: 0;
+}
